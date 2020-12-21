@@ -1,0 +1,10 @@
+{
+  "name": "gTrendsRevApi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Michael Airola",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
+}
