@@ -1,9 +1,11 @@
 const { 
-  getTLWidget, 
-  getTLTrend,
+  TrendsClient,
+  // getTLWidget, 
+  // getTLTrend,
 } = require("./lib/index.js");
 (async () => {try {
-  const tWidget = await getTLWidget({ 
+  const trendsCli = new TrendsClient();
+  let e = await trendsCli.authQuery({ 
     hl: "en-US", 
     tz: "480", 
     req: {
@@ -13,14 +15,11 @@ const {
       category:0,
       property:""
     },
-  });
-  const { request, token } = tWidget;
-  const timelineData = await getTLTrend({ 
-    hl: "en-US", tz: 480, 
-    token, 
-    req: request, 
-  });
-  console.log(timelineData[0])
+  })
+  if(e) throw e;
+  e = await trendsCli.getTimeline({ hl: "en-US", tz: 480 })
+  if(e) throw e;
+  console.log("data:", trendsCli.data.timelineData[0]);
 } catch(e) {
   console.log(e)
 }})()
