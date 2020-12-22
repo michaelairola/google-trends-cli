@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Michael Airola",
   "license": "MIT",
+  "scripts": {
+  	"start": "node ./lib/index.js"
+  },
   "dependencies": {
     "axios": "^0.21.0"
   }
