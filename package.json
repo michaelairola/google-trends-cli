@@ -1,11 +1,12 @@
 {
-  "name": "gTrendsRevApi",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "google-trends-cli",
+  "description": "Impromptu Google Trends api! Warning, WIP.",
+  "version": "0.0.1",
+  "main": "./lib/index.js",
   "author": "Michael Airola",
   "license": "MIT",
   "scripts": {
-  	"start": "node ./index.js"
+  	"test": "node ./index.js"
   },
   "dependencies": {
     "axios": "^0.21.0"

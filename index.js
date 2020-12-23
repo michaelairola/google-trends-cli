@@ -14,7 +14,7 @@ const cookie = "NID=205=aksdsOWLfmVm8Y529fZmVLh_x_lvcb59R6nO7_fVjb-8NnwXcbTLjsQk
   if(e) throw e;
   e = await trendsCli.getTimeline()
   if(e) throw e;
-  console.log("data:", trendsCli.data.timelineData[0]);
+  console.log("data:", trendsCli.data);
 } catch(e) {
   console.log(e)
 }})()
