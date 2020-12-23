@@ -1,4 +1,4 @@
-#Google Trends API Client!
+# Google Trends API Client!
 Warning, this is a work in progress so it might not work how it is intended, especially if google changes how the trends api works. However, I wanted a way to programatically get the google trends data in order to 
 
 Currently, you are only able to get the timeline data. Other data retrieval processes are a work in progress.
