@@ -4,17 +4,17 @@ const cookie = "NID=205=aksdsOWLfmVm8Y529fZmVLh_x_lvcb59R6nO7_fVjb-8NnwXcbTLjsQk
 
 (async () => {try {
   const trendsCli = new TrendsClient({ cookie });
-  let e = await trendsCli.authQuery({
+  let err = await trendsCli.authQuery({
     comparisonItem: [
       { 
           "keyword":"Hi","geo":"","time":"today 12-m"
       },
     ],
   })
-  if(e) throw e;
-  e = await trendsCli.getTimeline()
-  if(e) throw e;
-  console.log("data:", trendsCli.data);
+  if(err) throw err;
+  const { data, error } = await trendsCli.getTimeline()
+  if(error) throw error;
+  console.log("data:", data);
 } catch(e) {
   console.log(e)
 }})()
