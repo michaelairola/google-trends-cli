@@ -50,8 +50,8 @@ Example NID cookie: `"NID=205=dvwJyLE9N3dGUfsmwLik56lFe9Bgk0snFGU3sziiC2yiq4uEe0
 
 ## * `authQuery({ keyword, keywords, geo, time, category }) => error` 
 ### variables:
-| Option   | Default                 | Type    |  Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Example |
-|:--------:|:-----------------------:|:-------:|:----------------------:|:-------------:|
+| Option   | Default                 | Type    |  Description | Example |
+|:--------:|:-----------------------:|:-------:|:----------------------:|-------------|
 | keyword  | ""                      | string  | keyword to query for   | "Hello" |
 | keywords | [ "" ]                  | Array   | keywords to query and compare against each other | [ "Hello", "Hi" ] |
 | geo      | `GEOS.All`              | string  | Geographic zone to query for. All GEO values allowed are located [here](/templating/geos.txt) | `GEOS.United_States` | 
