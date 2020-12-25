@@ -43,14 +43,14 @@ In your terminal, run `node index.js`. If it responds with a list of data items,
 
 # TrendsClient Methods
 
-## Constructor: `new TrendsClient({ cookie })`
+## * `new TrendsClient({ cookie })`
 
 Initializes a new Google Trends Client. The cookie optional argument passed in is just a NID cookie, necessary for Authorizing query request. If cookie isn't supplied, Google Trends Client gets one from host [google.com](googl.com).
 Example NID cookie: `"NID=205=dvwJyLE9N3dGUfsmwLik56lFe9Bgk0snFGU3sziiC2yiq4uEe06OqHX2sSzo5SVXeGRL2ap7A1prutPpceJpG5_kYVpEvLiMCEvcyn6_qPPWYgU5vD7ZKnb7iqBVUjN85zRlGa6gaVTui9nWFzOwdk2q7_cr_V7h8E7eynntYJM; expires=Sat, 26-Jun-2021 01:28:49 GMT; path=/; domain=.google.com; HttpOnly"`
 
-## `authQuery({ keyword, keywords, geo, time, category }) => error` 
+## * `authQuery({ keyword, keywords, geo, time, category }) => error` 
 ### variables:
-| Option   | Default                 | Type    |  Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Example |
+| Option   | Default                 | Type    |  Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Example |
 |:--------:|:-----------------------:|:-------:|:----------------------:|:-------------:|
 | keyword  | ""                      | string  | keyword to query for   | "Hello" |
 | keywords | [ "" ]                  | Array   | keywords to query and compare against each other | [ "Hello", "Hi" ] |
@@ -60,7 +60,7 @@ Example NID cookie: `"NID=205=dvwJyLE9N3dGUfsmwLik56lFe9Bgk0snFGU3sziiC2yiq4uEe0
 | error    | undefined               | string  | error if query is malformed or unauthorized. If query is authorized, error is undefined. | "The server cannot process the request because it is malformed." |
 
 
-## Getting Data: `getTimeline()`
+## * `getTimeline()`
   The return value of this method is a widget that is used for requesting the data, with an error or data key appended to it. If the request is invalid, the error property will be filled, otherwise the response data will be placed in the data field.
 
 ---
