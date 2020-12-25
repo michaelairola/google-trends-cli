@@ -15,7 +15,7 @@
        // Get data associated with above query
        const { error, data } = await trendsCli.getTimeline()
        if(error) throw error;
-       console.log(data.timelineData);
+       console.log(data);
      } catch(e) {
        console.log(e)
      }})()
