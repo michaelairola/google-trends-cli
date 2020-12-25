@@ -55,8 +55,8 @@ Example NID cookie: `"NID=205=dvwJyLE9N3dGUfsmwLik56lFe9Bgk0snFGU3sziiC2yiq4uEe0
 | keyword  | ""                      | string  | keyword to query for   | "Hello" |
 | keywords | [ "" ]                  | Array   | keywords to query and compare against each other | [ "Hello", "Hi" ] |
 | geo      | `GEOS.All`              | string  | Geographic zone to query for. All GEO values allowed are located [here](/templating/geos.txt) | `GEOS.United_States` | 
-| time     | `TIME_RANGES.PAST_WEEK` | string  | Time range to query for. | `TIME_RANGES.CUSTOM("11/24/20", "12/24/20")` |
-| category | `CATEGORIES.All`        | string  | Category to query for. All category values allowed are located [here](/templating/categories.txt) | `CATEGORIES.Arts_Entertainment` |
+| time     | `TIME_RANGES.PAST_WEEK` | string  | Time range to query for. All Time range values are located [here](/templating/time_ranges.md)| `TIME_RANGES.CUSTOM("11/24/20", "12/24/20")` |
+| category | `CATEGORIES.All`        | string  | Category to query for. All category values allowed are located [here](/templating/categories.md) | `CATEGORIES.Arts_Entertainment` |
 | error    | undefined               | string  | error if query is malformed or unauthorized. If query is authorized, error is undefined. | "The server cannot process the request because it is malformed." |
 
 
