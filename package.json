@@ -1,7 +1,7 @@
 {
   "name": "google-trends-cli",
   "description": "Impromptu Google Trends api! Warning, WIP.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "./lib/index.js",
   "author": "Michael Airola",
   "license": "MIT",
