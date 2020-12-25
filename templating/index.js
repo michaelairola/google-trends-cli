@@ -84,7 +84,7 @@ const renderDropDown = (parents, NonUniqueList, parentsKey) =>
 ${renderDropDown(children, NonUniqueList, uniqueKey)}
 </ul>
 </details></li>` :
-`<li>${key}</li>`
+`<li>${key}</li><br>`
 	}).join(`\n`)
 
 
