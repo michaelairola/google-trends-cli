@@ -1,0 +1,11 @@
+TIME_RANGE Options
+	Past_hour
+	Past_4_hours
+	Past_day
+	Past_7_days
+	Past_30_days
+	Past_90_days
+	Past_12_months
+	Past_5_years
+	_2008_present
+	_2004_present

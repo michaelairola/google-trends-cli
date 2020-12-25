@@ -28,7 +28,7 @@ Create a file names `index.js` and place this in it:
        let err = await trendsCli.authQuery({
          keyword: "Hello",
          geo: GEOS.United_States,
-         time: TIME_RANGES.PAST_WEEK,
+         time: TIME_RANGES.Past_7_days,
        })
        if(err) throw err;
        // Get data associated with above query
