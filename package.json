@@ -11,7 +11,7 @@
   "author": "Michael Airola",
   "license": "MIT",
   "scripts": {
-  	"test": "node ./index.js"
+  	"test": "node ./examples/timeline.js"
   },
   "dependencies": {
     "axios": "^0.21.0"

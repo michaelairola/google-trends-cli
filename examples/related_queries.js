@@ -1,5 +1,5 @@
      // load the library and associated option values
-     const { TrendsClient, TIME_RANGES, GEOS } = require("./lib/index.js");
+     const { TrendsClient, TIME_RANGES, GEOS } = require("../lib/index.js");
      
      // must be in an asynchronous function
      (async () => {try {
@@ -13,7 +13,7 @@
        })
        if(err) throw err;
        // Get data associated with above query
-       const { error, data } = await trendsCli.getTimeline()
+       const { error, data } = await trendsCli.getRelatedTopics()
        if(error) throw error;
        console.log(data);
      } catch(e) {

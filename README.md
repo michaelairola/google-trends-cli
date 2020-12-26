@@ -3,6 +3,8 @@ Ever wanted the data from [Google Trends](https://trends.google.com/trends/explo
 
 This client uses and simplifies the google trends API so you can create easy queries, while also allowing for the scalability of multiple searches. Perfect for data-scientists who need lots of trends simultaneously!
 
+---
+
 ## 1) Install
 Make sure you have Node installed. Then run
 
@@ -13,6 +15,8 @@ Make sure you have Node installed. Then run
     yarn add google-trends-cli
 
 yarn is always safer, but hey if you're used to using npm then go for it. I'm not gonna stop you.
+
+---
 
 ## 2) Usage 
 Create a file names `index.js` and place this in it:
@@ -25,16 +29,14 @@ Create a file names `index.js` and place this in it:
        // initialize new client
        const trendsCli = new TrendsClient();
        // Authorize specific query
-       let err = await trendsCli.authQuery({
+       const query = {
          keyword: "Hello",
          geo: GEOS.UNITED_STATES,
          time: TIME_RANGES.PAST_7_DAYS,
-       })
-       if(err) throw err;
-       // Get data associated with above query
-       const { error, data } = await trendsCli.getTimeline()
-       if(error) throw error;
-       console.log(data);
+       }
+       trendsCli.toggleAll(true)
+       const response = await trendsCli.Query(query);
+       console.log(response);
      } catch(e) {
        console.log(e)
      }})()
@@ -48,7 +50,10 @@ In your terminal, run `node index.js`. If it responds with a list of data items,
 Initializes a new Google Trends Client. The cookie optional argument passed in is just a NID cookie, necessary for Authorizing query request. If cookie isn't supplied, Google Trends Client gets one from host [google.com](googl.com).
 Example NID cookie: `"NID=205=dvwJyLE9N3dGUfsmwLik56lFe9Bgk0snFGU3sziiC2yiq4uEe06OqHX2sSzo5SVXeGRL2ap7A1prutPpceJpG5_kYVpEvLiMCEvcyn6_qPPWYgU5vD7ZKnb7iqBVUjN85zRlGa6gaVTui9nWFzOwdk2q7_cr_V7h8E7eynntYJM; expires=Sat, 26-Jun-2021 01:28:49 GMT; path=/; domain=.google.com; HttpOnly"`
 
-## 2) `authQuery({ keyword, keywords, geo, time, category }) => error` 
+## 2) `toggleAll(toggle)`
+This method toggle all the different widget possibilities so that when the Query method is called, these data items are returned. Optional toggle methods that are similar to this one (but only toggle one widget at a time) are `toggleTimeline`, `toggleGeoMap`, `toggleRelatedQueries`, and `toggleRelatedTopics`.
+
+## 3) `Query({ keyword, keywords, geo, time, category }) => widgets` 
 ### variables:
 | Option   | Default                 | Type    |  Description | Example |
 |:--------:|:-----------------------:|:-------:|:----------------------:|-------------|
@@ -58,12 +63,3 @@ Example NID cookie: `"NID=205=dvwJyLE9N3dGUfsmwLik56lFe9Bgk0snFGU3sziiC2yiq4uEe0
 | time     | `TIME_RANGES.PAST_7_DAYS` | string  | Time range to query for. All Time range values are located [here](/docs/time_ranges.md)| `TIME_RANGES.CUSTOM("11/24/20", "12/24/20")` |
 | category | `CATEGORIES.ALL`        | string  | Category to query for. All category values allowed are located [here](/docs/categories.md) | `CATEGORIES.ARTS_ENTERTAINMENT` |
 | error    | undefined               | string  | error if query is malformed or unauthorized. If query is authorized, error is undefined. | "The server cannot process the request because it is malformed." |
-
-
-## 3) `getTimeline()`
-  The return value of this method is a widget that is used for requesting the data, with an error or data key appended to it. If the request is invalid, the error property will be filled, otherwise the response data will be placed in the data field.
-
----
-
-# WIP Reminder
-Please keep in mind that this is in the early stages of development, as I have not been able to implement the geo or related searches data part of the Google Trends Api. It shouldn't be too hard though! send a PR if you feel like you can handle it 
