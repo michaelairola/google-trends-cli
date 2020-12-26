@@ -62,4 +62,4 @@ This method toggle all the different widget possibilities so that when the Query
 | geo      | `GEOS.ALL`              | string  | Geographic zone to query for. All GEO values allowed are located [here](/docs/geos.md) | `GEOS.UNITED_STATES` | 
 | time     | `TIME_RANGES.PAST_7_DAYS` | string  | Time range to query for. All Time range values are located [here](/docs/time_ranges.md)| `TIME_RANGES.CUSTOM("11/24/20", "12/24/20")` |
 | category | `CATEGORIES.ALL`        | string  | Category to query for. All category values allowed are located [here](/docs/categories.md) | `CATEGORIES.ARTS_ENTERTAINMENT` |
-| error    | undefined               | string  | error if query is malformed or unauthorized. If query is authorized, error is undefined. | "The server cannot process the request because it is malformed." |
+| widgets    | undefined               | Array  | response widget. A widget has an error property if something went wrong and a data property if the data was successfully retrieved. | `{ data: { timelineData: { ... } } }` |
