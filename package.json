@@ -1,6 +1,11 @@
 {
   "name": "google-trends-cli",
   "description": "Impromptu Google Trends api! Warning, WIP.",
+  "url": "https://github.com/michaelairola/google-trends-cli/issues",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/michaelairola/google-trends-cli.git"
+  },
   "version": "0.2.0",
   "main": "./lib/index.js",
   "author": "Michael Airola",

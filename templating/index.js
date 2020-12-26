@@ -23,7 +23,7 @@ const getKey = name => {
 }
 
 const writeFile = (obj, list, fileName) => {
-	const listFileName = `./out/${fileName}.md`
+	const listFileName = `../docs/${fileName}.md`
 	fs.writeFile(listFileName, list, () => {
 		console.log(`${listFileName} updated!`)
 	})
