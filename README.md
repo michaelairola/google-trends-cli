@@ -51,7 +51,7 @@ Initializes a new Google Trends Client. The cookie optional argument passed in i
 Example NID cookie: `"NID=205=dvwJyLE9N3dGUfsmwLik56lFe9Bgk0snFGU3sziiC2yiq4uEe06OqHX2sSzo5SVXeGRL2ap7A1prutPpceJpG5_kYVpEvLiMCEvcyn6_qPPWYgU5vD7ZKnb7iqBVUjN85zRlGa6gaVTui9nWFzOwdk2q7_cr_V7h8E7eynntYJM; expires=Sat, 26-Jun-2021 01:28:49 GMT; path=/; domain=.google.com; HttpOnly"`
 
 ## 2) `toggleAll(toggle)`
-This method toggle all the different widget possibilities so that when the Query method is called, these data items are returned. Optional toggle methods that are similar to this one (but only toggle one widget at a time) are `toggleTimeline`, `toggleGeoMap`, `toggleRelatedQueries`, and `toggleRelatedTopics`.
+This method toggles all the different widget possibilities so that when the Query method is called, these data items are returned. Optional toggle methods that are similar to this one (but only toggle one widget at a time) are `toggleTimeline`, `toggleGeoMap`, `toggleRelatedQueries`, and `toggleRelatedTopics`.
 
 ## 3) `Query({ keyword, keywords, geo, time, category }) => widgets` 
 ### variables:
